@@ -15,7 +15,7 @@ import { JwtStrategy } from './jwt.strategy';
       secret: 'SEU_SEGREDO_SUPER_SECRETO', // Mude isso para uma variável de ambiente em produção!
       signOptions: { expiresIn: '60m' }, // Token expira em 60 minutos
     }),
-  ],  
+  ],
   providers: [AuthService, JwtStrategy],
   controllers: [AuthController],
 })
