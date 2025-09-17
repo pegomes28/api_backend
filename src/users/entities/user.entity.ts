@@ -1,8 +1,6 @@
-// src/users/entities/user.entity.ts
-
 import { ProductEntity } from '../../products/entities/product.entity';
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
-import { Role } from '../../common/enum/role.enum'; // 1. Importar o Enum
+import { Role } from '../../common/enum/role.enum';
 
 @Entity({ name: 'users' })
 export class UserEntity {
@@ -15,11 +13,11 @@ export class UserEntity {
   @Column()
   password: string;
 
-  // 2. Adicionar a nova coluna 'role'
+  // Coluna 'role' com valores limitados pelo enum Role
   @Column({
     type: 'enum',
     enum: Role,
-    default: Role.User, // Todo novo usuário será 'user' por padrão
+    default: Role.User, // todo novo usuário será "user" por padrão
   })
   role: Role;
 

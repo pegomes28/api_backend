@@ -1,4 +1,5 @@
+// Enum para os papéis dos usuários
 export enum Role {
-    User = 'user',
-    Admin = 'admin',
+  Admin = 'admin',
+  User = 'user',
 }
